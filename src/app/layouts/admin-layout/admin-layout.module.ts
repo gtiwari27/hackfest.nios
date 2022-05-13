@@ -14,6 +14,9 @@ import { ChartsModule } from 'ng2-charts';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
+import { ZoneComponent } from '../../zone/zone.component';
+import { MembersComponent } from '../../members/members.component';
+import { TrafficControlComponent } from '../../traffic-control/traffic-control.component';
 
 @NgModule({
   imports: [
@@ -33,6 +36,9 @@ import { UpgradeComponent } from '../../upgrade/upgrade.component';
     IconsComponent,
     MapsComponent,
     NotificationsComponent,
+    ZoneComponent,
+    MembersComponent,
+    TrafficControlComponent,
   ]
 })
 
