@@ -142,7 +142,7 @@
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
-      "styleext": "scss"
+      "skipTests": true
     },
     "@schematics/angular:directive": {
       "prefix": "app"
