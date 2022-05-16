@@ -5,6 +5,29 @@
     <div class="col-md-12">
       <div class="card">
       </div>
+      <div>
+        <button mat-raised-button color="primary" class="add" (click)="openZoneForm()">Add a DNS Zone</button>
+        <button mat-raised-button color="primary">Edit</button>
+        <button mat-raised-button color="primary">Delete</button>
+        <table class="table table-striped">
+          <thead>
+              <tr>
+                <th>Zone</th>
+                <th>Comment</th>
+                <th>Last Queried</th>
+                <th>Site</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let zone of Zones">
+              <td>{{ zone.name }}</td>
+              <td>{{ zone.username }}</td>
+              <td>{{ zone.email }}</td>
+              <td>{{ zone.id }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>

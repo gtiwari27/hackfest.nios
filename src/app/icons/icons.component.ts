@@ -1,4 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import ZonesJSON from '../zones.json';
+
+interface ZONES {
+  id: Number;
+  name: String;
+  username: String;
+  email: String;
+}
 
 @Component({
   selector: 'app-icons',
@@ -7,9 +15,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IconsComponent implements OnInit {
 
-  constructor() { }
+  Zones: ZONES[] = ZonesJSON;
+  constructor() { 
+    console.log(this.Zones);
+  }
 
   ngOnInit() {
+  }
+
+  openZoneForm() {
+    console.log("hello");
   }
 
 }
