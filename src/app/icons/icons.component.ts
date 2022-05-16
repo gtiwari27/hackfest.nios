@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import ZonesJSON from '../zones.json';
 
 interface ZONES {
-  id: Number;
+  id: String;
   name: String;
-  username: String;
-  email: String;
+  comment: String;
+  type: String;
 }
 
 @Component({
@@ -26,5 +26,10 @@ export class IconsComponent implements OnInit {
   openZoneForm() {
     console.log("hello");
   }
+
+  deleteRow(d){
+    const index = this.Zones.indexOf(d);
+    this.Zones.splice(index, 1);
+}
 
 }
