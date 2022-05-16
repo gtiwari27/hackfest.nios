@@ -8,22 +8,23 @@
       <div>
         <button mat-raised-button color="primary" class="add" (click)="openZoneForm()">Add a DNS Zone</button>
         <button mat-raised-button color="primary">Edit</button>
-        <button mat-raised-button color="primary">Delete</button>
+      
         <table class="table table-striped">
           <thead>
               <tr>
                 <th>Zone</th>
                 <th>Comment</th>
-                <th>Last Queried</th>
+                <th>Type</th>
                 <th>Site</th>
               </tr>
           </thead>
           <tbody>
             <tr *ngFor="let zone of Zones">
               <td>{{ zone.name }}</td>
-              <td>{{ zone.username }}</td>
-              <td>{{ zone.email }}</td>
+              <td>{{ zone.comment }}</td>
+              <td>{{ zone.type }}</td>
               <td>{{ zone.id }}</td>
+              <button mat-raised-button color="primary" (click)="deleteRow(zone)">Delete</button>
             </tr>
           </tbody>
         </table>

@@ -18,10 +18,20 @@ import { ZoneComponent } from '../../zone/zone.component';
 import { MembersComponent } from '../../members/members.component';
 import { TrafficControlComponent } from '../../traffic-control/traffic-control.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTable } from '@angular/material/table';
+import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
+
+
 
 @NgModule({
   imports: [
     CommonModule,
+    MatTableModule,
+    MatFormFieldModule,
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
     ChartsModule,
