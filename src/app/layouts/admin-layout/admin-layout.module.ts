@@ -17,6 +17,7 @@ import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { ZoneComponent } from '../../zone/zone.component';
 import { MembersComponent } from '../../members/members.component';
 import { TrafficControlComponent } from '../../traffic-control/traffic-control.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   imports: [
@@ -25,6 +26,7 @@ import { TrafficControlComponent } from '../../traffic-control/traffic-control.c
     FormsModule,
     ChartsModule,
     NgbModule,
+    MatButtonModule,
     ToastrModule.forRoot()
   ],
   declarations: [
