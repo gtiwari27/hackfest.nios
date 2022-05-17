@@ -27,6 +27,25 @@
     "name": "zone5.com",
     "comment": "qrs",
     "type": "Auth"
+  },
+
+  {
+    "id": "Kolkata",
+    "name": "zone6.com",
+    "comment": "abc",
+    "type": "Reverse"
+  },
+  {
+    "id": "Hyderabad",
+    "name": "zone7.com",
+    "comment": "mno",
+    "type": "Reverse"
+  },
+  {
+    "id": "London",
+    "name": "zone8.com",
+    "comment": "qrs",
+    "type": "Auth"
   }
 
 ]
