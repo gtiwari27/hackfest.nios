@@ -17,6 +17,8 @@ interface ZONES {
 })
 export class IconsComponent implements OnInit {
 
+  displayModal: boolean;
+
   Zones: ZONES[] = ZonesJSON;
   closeResult = '';
   
@@ -27,6 +29,10 @@ export class IconsComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  showModalDialog() { 
+    this.displayModal = true;
+}
 
   open(content) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {

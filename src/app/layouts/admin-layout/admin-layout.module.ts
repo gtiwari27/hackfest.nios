@@ -23,6 +23,9 @@ import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {DialogModule} from 'primeng/dialog';
+import {ButtonModule} from 'primeng/button';
+import {TabViewModule} from 'primeng/tabview';
 
 
 
@@ -37,6 +40,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     ChartsModule,
     NgbModule,
     MatButtonModule,
+    DialogModule,
+		ButtonModule,
+    TabViewModule,
     ToastrModule.forRoot()
   ],
   declarations: [

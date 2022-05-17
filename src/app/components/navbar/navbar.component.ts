@@ -152,4 +152,8 @@ export class NavbarComponent implements OnInit {
       }
       return 'Dashboard';
     }
+
+    logout(){
+      return 'Dashboard';
+    }
 }
