@@ -1,3 +1,53 @@
+<!--Modal Starts -->
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Add New DNS Zone</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <br>
+        <div class="input-group">
+          <input id="name" name="name" class="form-control" ngModel>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="dnsview">DNS View:</label> <br>
+    <select id="view" name="view">
+    <option value="Intern BIELBIENNE">Intern BIELBIENNE</option>
+    <option value="Intern Schulen">Intern Schulen</option>
+    </select>
+    </div>
+      <div class="form-group">
+      <label for="zonetype">Choose type of Zone:</label>
+      <br>
+  <select id="type" name="type">
+  <option value="Authoritative">Authoritative</option>
+  <option value="Forward">Forward</option>
+  <option value="Reverse">Reverse</option>
+  </select>
+  </div>
+      <div class="form-group">
+        <label for="comment">Comment</label>
+        <br>
+        <div class="input-group">
+          <input id="comment" name="comment" class="form-control" ngModel>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="addZone(content)">Save</button>
+    <!-- <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button> -->
+  </div>
+</ng-template>
+
+<!--Modal Ends here-->
+
 <div class="panel-header panel-header-sm">
 </div>
 <div class="main-content">
@@ -6,8 +56,10 @@
       <div class="card">
       </div>
       <div>
-        <button mat-raised-button color="primary" class="add" (click)="openZoneForm()">Add a DNS Zone</button>
+        <button mat-raised-button color="primary" class="add" (click)="open(content)">Add a DNS Zone</button>
         <button mat-raised-button color="primary">Edit</button>
+
+        
       
         <table class="table table-striped">
           <thead>
