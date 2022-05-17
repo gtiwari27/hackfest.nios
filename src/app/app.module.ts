@@ -13,7 +13,9 @@ import { AppComponent } from './app.component';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { LoginComponent } from './login/login.component';
-
+import {DialogModule} from 'primeng/dialog';
+import {ButtonModule} from 'primeng/button';
+import {TabViewModule} from 'primeng/tabview';
 
 @NgModule({
   imports: [
@@ -24,6 +26,9 @@ import { LoginComponent } from './login/login.component';
     RouterModule,
     AppRoutingModule,
     NgbModule,
+    DialogModule,
+		ButtonModule,
+    TabViewModule,
     ToastrModule.forRoot()
   ],
   declarations: [
