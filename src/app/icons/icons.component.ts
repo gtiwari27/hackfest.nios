@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import ZonesJSON from '../zones.json';
+import { ModalDismissReasons,NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 
 interface ZONES {
   id: String;
@@ -16,11 +18,36 @@ interface ZONES {
 export class IconsComponent implements OnInit {
 
   Zones: ZONES[] = ZonesJSON;
-  constructor() { 
+  closeResult = '';
+  
+
+  constructor(private modalService: NgbModal) { 
     console.log(this.Zones);
   }
 
   ngOnInit() {
+  }
+
+  open(content) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+  
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
+  }
+
+  addZone(d){
+    this.Zones.push(d);
   }
 
   openZoneForm() {

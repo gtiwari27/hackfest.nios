@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { LoginComponent } from './login/login.component';
-import { DialogBoxComponent } from './dialog-box/dialog-box.component';
+
 
 @NgModule({
   imports: [
@@ -29,8 +29,7 @@ import { DialogBoxComponent } from './dialog-box/dialog-box.component';
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    LoginComponent,
-    DialogBoxComponent
+    LoginComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
