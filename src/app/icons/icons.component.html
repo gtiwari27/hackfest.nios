@@ -1,7 +1,7 @@
 <!--Modal Starts -->
 <ng-template #content let-modal>
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Add New DNS Zone</h4>
+    <h4 class="modal-title" id="modal-basic-title">Add a DNS Zone</h4>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -18,12 +18,12 @@
       <div class="form-group">
         <label for="dnsview">DNS View:</label> <br>
     <select id="view" name="view">
-    <option value="Intern BIELBIENNE">Intern BIELBIENNE</option>
-    <option value="Intern Schulen">Intern Schulen</option>
+    <option value="Intern BIELBIENNE">Default</option>
+    <option value="Intern Schulen">Interim</option>
     </select>
     </div>
       <div class="form-group">
-      <label for="zonetype">Choose type of Zone:</label>
+      <label for="zonetype">Zone Type</label>
       <br>
   <select id="type" name="type">
   <option value="Authoritative">Authoritative</option>
@@ -57,10 +57,7 @@
       </div>
       <div>
         <button mat-raised-button color="primary" class="add" (click)="open(content)">Add a DNS Zone</button>
-        <button mat-raised-button color="primary">Edit</button>
 
-        
-      
         <table class="table table-striped">
           <thead>
               <tr>
@@ -76,6 +73,7 @@
               <td>{{ zone.comment }}</td>
               <td>{{ zone.type }}</td>
               <td>{{ zone.id }}</td>
+              <button mat-raised-button color="primary" (click)="editRow(zone)">Edit</button>
               <button mat-raised-button color="primary" (click)="deleteRow(zone)">Delete</button>
             </tr>
           </tbody>

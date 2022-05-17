@@ -57,6 +57,11 @@ export class IconsComponent implements OnInit {
   deleteRow(d){
     const index = this.Zones.indexOf(d);
     this.Zones.splice(index, 1);
-}
+  }
+
+  editRow(d) {
+    const index = this.Zones.indexOf(d);
+    console.log(index);
+  }
 
 }
